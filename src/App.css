@@ -1,0 +1,464 @@
+body {
+  background-color: #f5f5f6;
+  margin: 0px !important;
+}
+
+.dropbtn {
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: Poppins Arial Helvetica sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-left: 30px;
+  font-size: 13px;
+  padding-bottom: 2px;
+  font-weight: 550;
+}
+
+.dropbtn1{
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  font-family: Poppins Arial Helvetica sans-serif;
+  cursor: pointer;
+  color: #ffffff;
+  margin-left: 30px;
+  text-transform: uppercase;
+  padding-bottom: 2px;
+  font-weight: 550;
+  font-size: 13px;
+}
+.dropsplit {
+  display: flex;
+  align-items: center;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  top: 45px;
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ffffff;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  transform: none;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  /* background-color: #3e8e41; */
+  cursor: pointer;
+}
+
+.carousel .thumbs {
+  display: none;
+}
+.control-dots {
+  display: none;
+}
+.carousel-status {
+  display: none;
+}
+.slider-wrapper{
+  border-radius: 30px;
+}
+
+/* cards */
+.cardContainer{
+  /* width: 18%; */
+  padding: 5px;
+  display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-list:hover{
+  box-shadow: 0px 21px 59px 0px rgba(0,0,0,0.6);
+
+}
+.product-list {
+  display: block !important;
+  background: #fff;
+  margin: 0 0px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid #eee;
+  padding: 0px;
+  /* zoom: 1;
+  -webkit-box-shadow: 1px 1px 3px 0 #f2f2f2;
+  box-shadow: 1px 1px 3px 0 #f2f2f2; */
+  /* background-size: 100% 200px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-image: -webkit-linear-gradient(
+    bottom,
+    #fafafa 0,
+    #fdfdfd 20%,
+    #fff 60%
+  ); */
+  background-image: linear-gradient(to top, #fafafa 0, #fdfdfd 20%, #fff 60%);
+}
+
+.product-img-wrap {
+  position: relative;
+  /* height: 100%; */
+  overflow: hidden;
+  padding: 8px;
+
+}
+.product-img-wrap img{
+    transform-style: preserve-3d;
+    max-width: 100%
+}
+.product-img-primary, .product-img-alt, .product-img {
+  width: 100%;
+  display: block;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 1;
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
+}
+.product-info {
+  font-family: 'Rubik', sans-serif;
+  padding: 5px 5px;
+  position: relative;
+  margin-left: 10px;
+  padding-bottom: 30px;
+}
+.product-info-title{
+  position: relative;
+    display: block;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    /* overflow: hidden; */
+    text-decoration: none;
+    font-size: 15px;
+    height: auto;
+    color: black;
+    max-height: 3.75em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-info-rating{
+  font-size: 13px;
+  margin-top: 10px;
+}
+.product-info-rating span {
+  /* color: #e9018b; */
+  color: #16754D;
+  /* color: #002831; */
+}
+
+.product-info-price {
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1em;
+  display: inline-block;
+}
+.product-info-price-new {
+  color: #009d48;
+}
+.product-info-price > span.old-price {
+  font-size: 14px !important;
+  font-weight: lighter;
+  margin-left: 7px;
+  color: #db2020 !important;
+  text-decoration: line-through !important;
+}
+.discoung_tag1 {
+  display: inline-block;
+  background: #009d48;
+  line-height: 1em;
+  font-size: 10px !important;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 5px;
+  margin-left: 4px;
+}
+
+
+/* midsection */
+.mid-section{
+  background: #000 url(https://www.clickokart.com/themes/default/assets/img/mid-img.jpg) repeat 0 0;
+  padding: 70px 0 80px;
+    overflow: hidden;
+    margin-top: 0px;
+}
+.containermid{
+  margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.containermid::before{
+  content: " ";
+    display: table;
+}
+.rowmid::before{
+  content: " ";
+    display: table;
+}
+.rowmid{
+  margin-left: -15px;
+  margin-right: -15px;
+}
+.mid-section h3 {
+  font-size: 45px;
+  margin: 0;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 10px;
+  letter-spacing: .5px;
+  font-family: 'Vujahday Script', cursive;
+}
+.mid-section h2 {
+  font-size: 61px;
+  margin: 0;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-bottom: 20px;
+  letter-spacing: .5px;
+  font-family: 'Vujahday Script', cursive;
+}
+.rowmid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.block1{
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-top: 86px;
+  background: #685c88;
+  border-radius: 20px;
+  padding: 25px 100px 25px 25px;
+  margin-right: -132px;
+}
+.mid-section strong {
+  font-weight: 400;
+  color: #fff;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+.mid-section p {
+  margin: 0 0 10px;
+}
+.mid-section .block2 {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  margin-top: 25px;
+  background: #6ec3f0;
+  border-radius: 20px;
+  padding: 25px 100px 25px 25px;
+  margin-right: -132px;
+}
+.spl-pro {
+  background: #fff;
+  border-radius: 999px;
+  padding: 5px 20px 30px;
+  margin-bottom: 0;
+  z-index: 10;
+  margin-top: 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 25px -7px #000;
+}
+.spl-pro a {
+  text-decoration: none !important;
+  color: #343a40;
+  transition-duration: 0.4s;
+  font-weight: 400;
+  color: #009d48;
+}
+.spl-pro img {
+  max-width: 100%;
+  border-radius: 999px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+}
+
+.mid-section .block3 {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin-top: 86px;
+  background: #1bbc9b;
+  border-radius: 20px;
+  padding: 25px 25px 25px 128px;
+  margin-left: -132px;
+}
+.mid-section .block4 {
+  overflow: hidden;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  margin-top: 25px;
+  background: #e31837;
+  border-radius: 20px;
+  padding: 25px 25px 25px 128px;
+  margin-left: -132px;
+}
+/* googleReview */
+.gRevviewHeader h2{
+text-align: center;
+margin-bottom: 45px;
+}
+.gRevviewHeader span{
+  color: #009d48;
+  }
+
+/* testisec */
+.testimonialSec{
+  min-height: 333px;
+  position: relative;
+  background: url(https://www.clickokart.com/themes/default/assets/img/testimonials.jpg);
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.testiContainer{
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.testiContainer::before{
+  content: '';
+  display: table;
+}
+.category-title{
+  padding: 11px;
+}
+.title_heading {
+  font-size: 43px;
+  font-weight: 500;
+  text-align: center;
+  font-family: 'Vujahday Script', cursive;
+  color: #fff;
+}
+.carouselsec{
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.item{
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.6s ease-in-out;
+}
+.testimonial4_slide {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+  padding: 0 20px;
+  position: relative;
+  text-align: center;
+}
+.testimonial4_slide p {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.4;
+  margin: 20px 0 20px 0;
+  font-family: 'Merriweather', serif;
+}
+.testimonial4_slide h4 {
+  color: #009d48;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 400;
+}
+.carousel-control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  font-size: 51px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0);
+}
+.carousel-controlrigh {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  right: 20px;
+  opacity: .5;
+  filter: alpha(opacity=50);
+  font-size: 51px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0);
+}
+.fa{
+  display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+.right{
+  text-align: right;
+}
+.gReviewPartRight{
+  height: 100% !important;
+}
