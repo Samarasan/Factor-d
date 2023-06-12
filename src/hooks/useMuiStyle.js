@@ -2,11 +2,14 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
   //Header.tsx
-  headerContainer: {
-    height: "98px !important",
-  },
+  // headerContainer: {
+  //   height: "98px !important",
+  // },
   headerCon: {
     height: "98px !important",
+    "@media screen and (min-width: 1023px) and (max-width: 1240px)": {
+      height:"74px !important"
+    }
   },
   headerFixed: {
     position: "fixed",
@@ -137,7 +140,7 @@ export const useStyles = makeStyles(() => ({
     cursor: "pointer",
   },
   bagCartListDetails: {
-    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontFamily: "Vujahday Script, cursive !important",
     fontSize: "1.2rem !important",
   },
   bagCartText: {
@@ -175,32 +178,38 @@ export const useStyles = makeStyles(() => ({
   },
   //headermobile
   headermbl: {
-    fontFamily: "Poppins Arial Helvetica sans-serif !important",
-    marginTop: "8px !important",
+    fontFamily: "Vujahday Script, cursive !important",
+    padding: "5px 0px 5px 8px !important",
+    textAlign:"left !important",
+    backgroundImage: "linear-gradient(to right top, #16754D, #002831);",
+    fontSize:"16px !important",
+    color:"white"
   },
   headermblsub: {
-    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontFamily: "Vujahday Script, cursive !important",
     fontSize: "1rem !important",
     marginTop: "8px !important",
-    padding: "17px 0px!important",
+    padding: "10px 0px!important",
     transition: "1s ease !important",
+    backgroundColor: "#002831",
+    color:"white"
   },
   listItems: {
     "&.css-10hburv-MuiTypography-root": {
-      fontFamily: "Poppins Arial Helvetica sans-serif !important",
+      fontFamily: "Vujahday Script, cursive !important",
     },
   },
   menudrp: {
-    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontFamily: "Vujahday Script, cursive !important",
     display: "flex",
     alignItems: "center",
     textAlign: "left",
     margin: "10px 0px",
-  },
+  }, 
   menydrptitle: {
     fontSize: "1.6rem !important",
     lineHeight: "1.3rem !important",
-    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontFamily: "Vujahday Script, cursive !important",
     position: "relative",
     "@media (max-width: 800px)": {
       fontSize: "1rem !important",
@@ -213,6 +222,7 @@ export const useStyles = makeStyles(() => ({
     listStyle: "none",
     top: "0",
     fontWeight: "550",
+   
   },
   partListItems1: {
     textTransform: "uppercase",
@@ -227,6 +237,9 @@ export const useStyles = makeStyles(() => ({
     zIndex: "200",
     color: "white",
     fontWeight: "550",
+    "@media screen and (min-width: 1023px) and (max-width: 1240px)": {
+      top: "69px",
+    }
   },
   headerPartLists: {
     display: "flex",
@@ -255,6 +268,12 @@ export const useStyles = makeStyles(() => ({
       objectFit: "cover",
       borderRadius: "30px",
       maxHeight: "27em",
+    },
+    "@media (max-width: 780px)": {
+      height: "100%",
+      "& img": {
+        maxHeight: "12em",
+      },
     },
   },
   sideslideImg1: {
@@ -320,74 +339,97 @@ export const useStyles = makeStyles(() => ({
 
   //googleREview
   grVLeftHeader: {
-    marginBottom:"1px !important",
-    textAlign:"left !important"
+    marginBottom: "1px !important",
+    textAlign: "left !important",
   },
-  reviewAlign:{
+  reviewAlign: {
     float: "none",
     margin: "0 auto !important",
     width: "100%",
     maxWidth: "90%",
   },
-  socialImg:{
-    display:"flex",
-    width:"100px",
-    "& img":{
-      width:"100%",
-      marginLeft:"20px"
+  socialImg: {
+    display: "flex",
+    width: "100px",
+    "& img": {
+      width: "100%",
+      marginLeft: "20px",
+    },
+    "@media (max-width: 780px)": {
+      width:'100%',
+      alignItems:"center",
+      justifyContent:"center",
+      "& img":{
+        width:"80px",
+      }
     }
   },
-  ratingsNum:{
-    fontSize:"6rem",
-    color:"#009d48",
-    margin:"0 0 0 42px",
-    textAlign:"left",
-    "& span":{
-      fontSize:"1.5rem"
+  ratingsNum: {
+    fontSize: "6rem",
+    color: "#009d48",
+    margin: "0 0 0 42px",
+    textAlign: "left",
+    "& span": {
+      fontSize: "1.5rem",
+    },
+    "@media (max-width: 780px)": {
+      textAlign:"left",
+      margin:"0px",
+      fontSize:"3rem",
+      "& span":{
+        fontSize:"0.875rem"
+      }
+    }
+  },
+  startRating: {
+    display: "flex",
+    alignItems: "center",
+    marginLeft: "42px",
+    "@media (max-width: 780px)": {
+      margin:"0px",
+      paddingBottom:"10px"
+    }
+  },
+  reviewContainer: {
+    padding: "1rem 2rem",
+    borderRadius: "16px",
+    background: "#fff",
+    marginLeft: "75px",
+    marginBottom: "20px",
+    "@media (max-width: 780px)": {
+      marginLeft: "0px",
+     
     },
   },
-  startRating:{
-    display:"flex",
-    alignItems:'center',
-    marginLeft:"42px"
+  ratingHead: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
   },
- reviewContainer:{
-  padding:"1rem 2rem",
-  borderRadius:"16px",
-  background:"#fff",
-  marginLeft:"75px",
-  marginBottom:"20px"
+  ratingName: {
+    margin: "0px !important",
   },
-  ratingHead:{
-    display:"flex",
-    alignItems:'center',
-    justifyContent:"space-between"
-  },
-  ratingName:{
-    margin:"0px !important"
-  },
-  gReviewPartRight:{
-    height:"calc(100vh - 35vh)",
-    overflowY:"scroll",
-    overflowY: 'scroll', // Enable vertical scrollbar
-    '&::-webkit-scrollbar': {
-      width: '7px', // Set the desired width for webkit-based browsers
-      height:"10px !important",
-      borderRadius:"20px"
+  gReviewPartRight: {
+    height: "calc(100vh - 35vh)",
+    overflowY: "scroll",
+    overflowY: "scroll", // Enable vertical scrollbar
+    "&::-webkit-scrollbar": {
+      width: "7px", // Set the desired width for webkit-based browsers
+      height: "10px !important",
+      borderRadius: "20px",
     },
-    '&::-webkit-scrollbar-track': {
-      background: '#f1f1f1', // Set the background color of the track for webkit-based browsers
+    "&::-webkit-scrollbar-track": {
+      background: "#f1f1f1", // Set the background color of the track for webkit-based browsers
     },
-    '&::-webkit-scrollbar-thumb': {
-      background: '#888', // Set the color of the thumb for webkit-based browsers
+    "&::-webkit-scrollbar-thumb": {
+      background: "#888", // Set the color of the thumb for webkit-based browsers
     },
-    scrollbarWidth: 'thin', // Set the desired width for Firefox and some newer browsers
-    '&::-moz-scrollbar-track': {
-      background: '#f1f1f1', // Set the background color of the track for Firefox and some newer browsers
+    scrollbarWidth: "thin", // Set the desired width for Firefox and some newer browsers
+    "&::-moz-scrollbar-track": {
+      background: "#f1f1f1", // Set the background color of the track for Firefox and some newer browsers
     },
-    '&::-moz-scrollbar-thumb': {
-      background: '#888', // Set the color of the thumb for Firefox and some newer browsers
+    "&::-moz-scrollbar-thumb": {
+      background: "#888", // Set the color of the thumb for Firefox and some newer browsers
     },
   },
-
 }));

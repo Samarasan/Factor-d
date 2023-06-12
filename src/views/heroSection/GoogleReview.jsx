@@ -8,7 +8,7 @@ import Reviews from "../../components/Reviews";
 const GoogleReview = () => {
   const classes = useStyles();
   return (
-    <div style={{ padding: "2rem 0rem" }}>
+    <div className="googleReview" >
       <div className="gRevviewHeader">
         <h2>
           <span>10000 +</span>HAPPY CUSTOMERS

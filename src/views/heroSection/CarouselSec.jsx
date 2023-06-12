@@ -40,7 +40,7 @@ const CarouselSec = () => {
         // sx={{ margin: "auto" }}
        
       >
-        <Grid item xs={12} sm={6} md={9} className={classes.carouselLeft}>
+        <Grid item xs={12} sm={12} md={9} className={classes.carouselLeft}>
           <Carousel autoPlay infiniteLoop showArrows>
             {slides.map((slide, index) => (
               <div key={index} className={classes.carouselMainImg}>
@@ -49,7 +49,7 @@ const CarouselSec = () => {
             ))}
           </Carousel>
         </Grid>
-        <Grid item xs={12} sm={6} md={3} className={classes.CarouselRight}>
+        <Grid item xs={12} sm={6} md={3} className={classes.CarouselRight} sx={{display:{xs:"none",md:"block"}}}>
           <Box className={classes.sideslideImg1}> 
               <img src={sideslide1} alt='slide1' />
           </Box>

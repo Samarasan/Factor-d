@@ -1,4 +1,4 @@
-import React, { useState , useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 //Components
 import HeaderSearch from "./HeaderSearch";
@@ -26,36 +26,34 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Button from "@mui/material/Button";
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
-import ShareLocationIcon from '@mui/icons-material/ShareLocation';
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import ShareLocationIcon from "@mui/icons-material/ShareLocation";
 // Hooks
 import HeaderCart from "./HeaderCart";
 import { Link, useNavigate } from "react-router-dom";
 import { useStyles } from "../../hooks/useMuiStyle";
 import HeaderTopPart from "./HeaderTopPart";
 import { useWindowScrollPositions } from "../../hooks/useWindowScrollPosition";
+import { useProducts } from "../../hooks/useProduct";
 // import { useProducts } from "../../products/useProducts";
 // import HeaderAccordian from "./HeaderAccordian";
 
-
 const drawerWidth = 240;
- const navItems = ["Home", "About Us", "Services", "Expertise", "Contact Us"];
 
- const Header = (props) => {
+const Header = (props) => {
   const { window } = props;
-  const { scrollX, scrollY } = useWindowScrollPositions()
+  const { navItems } = useProducts();
+  const { scrollY } = useWindowScrollPositions();
   const headerRef = useRef(null);
   const navigate = useNavigate();
-  const classes = useStyles()
+  const classes = useStyles();
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [view, setView] = useState(false);
-//   const { featureProducts, categories ,navItems} = useProducts();
+  //   const { featureProducts, categories ,navItems} = useProducts();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
-
-  
 
   const [enphaseSearch, setEnphaseSearch] = useState(null);
   const open = Boolean(enphaseSearch);
@@ -78,13 +76,13 @@ const drawerWidth = 240;
     handleClose();
   };
 
-  const filteredSerachResult =[]
-//    featureProducts.filter((item) => {
-//     return Object.values(item.pName)
-//       .join("")
-//       .toLowerCase()
-//       .includes(searchResult.toLowerCase());
-//   });
+  const filteredSerachResult = [];
+  //    featureProducts.filter((item) => {
+  //     return Object.values(item.pName)
+  //       .join("")
+  //       .toLowerCase()
+  //       .includes(searchResult.toLowerCase());
+  //   });
   const handlelistClick = (route) => {
     switch (route) {
       case "Home":
@@ -105,45 +103,34 @@ const drawerWidth = 240;
     <Box sx={{ textAlign: "center" }}>
       <Typography
         variant="h6"
-        sx={{ py: 2 }}
         className={classes.headermbl}
         onClick={handleDrawerToggle}
       >
-        Cognitronics
+        Hi Guest
       </Typography>
-      <Divider sx={{ borderWidth: "2px" }} />
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         <Grid
           item
           xs={6}
-          onClick={() => setView(false)}
           className={classes.headermblsub}
           sx={{
-            backgroundColor: !view ? "#eeeeee" : "ffffff",
-            color: !view ? "#009f76" : "",
+            borderRight: "1px solid white",
           }}
         >
-          MENU
+          Login
         </Grid>
         <Grid
           item
           xs={6}
-          onClick={() => setView(true)}
           className={classes.headermblsub}
-          sx={{
-            backgroundColor: view ? "#eeeeee" : "ffffff",
-            color: view ? "#009f76" : "",
-          }}
         >
-          CATEGORIES
+          Register
         </Grid>
       </Grid>
       <List>
-        {/* {!view &&
-          navItems.map((item) => (
-            <>
-            {item.contents ? (<HeaderAccordian content={item} setMobileOpen={setMobileOpen}/>):(<>
-              <ListItem
+        {navItems.map((item) => (
+          <>
+            <ListItem
               key={item.id}
               disablePadding
               onClick={() => {
@@ -163,11 +150,9 @@ const drawerWidth = 240;
                 />
               </ListItemButton>
             </ListItem>
-            <Divider /></>
-            )}
-              
-            </>
-          ))} */}
+            <Divider />
+          </>
+        ))}
       </List>
       <List>
         {/* {view &&
@@ -206,143 +191,170 @@ const drawerWidth = 240;
     window !== undefined ? () => window().document.body : undefined;
   return (
     <>
-    <Box ref={headerRef}>
-    <HeaderTopPart />
-    </Box>
-    <Box className={`${scrollY > 4 ? classes.headerContainer :classes.headerCon}`} >
-      <AppBar component="nav" className={`${scrollY > 4 ? classes.headerFixed :classes.appBar}`}>
-        <Toolbar className={classes.hearderToolbar}>
-          <IconButton
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
+      <Box ref={headerRef}>
+        <HeaderTopPart />
+      </Box>
+      <Box
+        className={`${
+          scrollY > 4 ? classes.headerContainer : classes.headerCon
+        }`}
+      >
+        <AppBar
+          component="nav"
+          className={`${scrollY > 4 ? classes.headerFixed : classes.appBar}`}
+        >
+          <Toolbar className={classes.hearderToolbar}>
+            <IconButton
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              sx={{
+                display: { sm: "flex", md: "none" },
+                color: " #16754D",
+              }}
+            >
+              <MenuIcon sx={{fontSize:"2.5rem"}} />
+            </IconButton>
+            <Box
+              sx={{ display: "flex", textDecoration: "none" }}
+              className={classes.headerlogoContainer}
+            >
+              <Link to="/">
+                {" "}
+                <img src={logo} alt="logo" className={classes.headerLogo} />
+                {/* Factor D */}
+              </Link>
+            </Box>
+            <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
+              <HeaderSearch />
+            </Box>
+            <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
+              <Button
+                className={classes.headerSearchButton}
+                id="basic-button"
+                aria-controls={open ? "basic-menu" : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? "true" : undefined}
+                onClick={handleClick}
+              >
+                <SearchIcon sx={{ color: "#002831",fontSize:"2rem" ,ml:"45px !important"}} />
+              </Button>
+              <Menu
+                id="basic-menu"
+                anchorEl={enphaseSearch}
+                open={open}
+                className={classes.searchDropdow}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+                sx={{ left: "-2px !important", top: "10px !important" }}
+              >
+                <Box className={classes.searchInput}>
+                  <Grid item className={classes.storeinputData}>
+                    <TextField
+                      type="search"
+                      name="search"
+                      sx={{ width: "90%" }}
+                      placeholder="Search..."
+                      className={classes.searchBox1}
+                      value={searchResult}
+                      onChange={onHandleChange}
+                      onKeyDown={(event) => event.stopPropagation()}
+                    />
+                  </Grid>
+                  <Box>
+                    {searchResult && (
+                      <ul style={{ marginTop: "10px", paddingLeft: "10px" }}>
+                        {filteredSerachResult.map((item) => {
+                          return (
+                            <>
+                              <li
+                                className={classes.headersearchList}
+                                key={item}
+                                onClick={() => handleSearchItemClick(item.id)}
+                              >
+                                <Box className={classes.cartImgContainer}>
+                                  <img
+                                    style={{ width: "100%" }}
+                                    src={item.imgUrl}
+                                    alt="search"
+                                  />
+                                </Box>
+                                <Box className={classes.bagCartListDetails}>
+                                  <Box
+                                    className={classes.bagCartText}
+                                    sx={{ width: "90%" }}
+                                  >
+                                    {item.pName}
+                                  </Box>
+                                </Box>
+                              </li>
+                              <Divider />
+                            </>
+                          );
+                        })}
+                      </ul>
+                    )}
+                  </Box>
+                </Box>
+              </Menu>
+            </Box>
+            <Box className={classes.headerSideContainer}>
+              <HeaderCart
+                icon={
+                  <ShoppingBasketIcon
+                    sx={{ fontSize: "1.8em", color: " #002831" }}
+                  />
+                }
+                content={"Your Cart"}
+              />
+              <HeaderCart
+                icon={
+                  <ShareLocationIcon
+                    sx={{ fontSize: "1.8em", color: " #002831" }}
+                  />
+                }
+                content={"Track Order"}
+              />
+              <HeaderCart
+                icon={
+                  <AccountCircleIcon
+                    sx={{ fontSize: "1.8em", color: " #002831" }}
+                  />
+                }
+                content={"Login/Register"}
+              />
+            </Box>
+          </Toolbar>
+        </AppBar>
+        <Box component="nav">
+          <Drawer
+            container={container}
+            variant="temporary"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true, // Better open performance on mobile.
+            }}
             sx={{
-              md: 2,
-              display: { sm: "flex", md: "none" },
-              color: "#3a3a3a",
+              display: { xs: "block", sm: "block" },
+              "& .MuiDrawer-paper": {
+                boxSizing: "border-box",
+                width: drawerWidth,
+                backgroundColor: "#f5f5f6",
+              },
             }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            sx={{ display: "flex", textDecoration: "none" }}
-            className={classes.headerlogoContainer}
-          >
-            <Link to="/">
-              {" "}
-              <img src={logo} alt="logo" className={classes.headerLogo} />
-              {/* Factor D */}
-            </Link>
-          </Box>
-          <Box sx={{ display: { xs: "none", sm: "none", md: "flex" } }}>
-            <HeaderSearch />
-          </Box>
-          <Box sx={{ display: { xs: "flex", sm: "flex", md: "none" } }}>
-            <Button
-              className={classes.headerSearchButton}
-              id="basic-button"
-              aria-controls={open ? "basic-menu" : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
-              onClick={handleClick}
-            >
-              <SearchIcon sx={{ color: "#3a3a3a" }} />
-            </Button>
-            <Menu
-              id="basic-menu"
-              anchorEl={enphaseSearch}
-              open={open}
-              className={classes.searchDropdow}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-              sx={{ left: "-2px !important", top: "10px !important" }}
-            >
-              <Box className={classes.searchInput}>
-                <Grid item className={classes.storeinputData}>
-                  <TextField
-                    type="search"
-                    name="search"
-                    sx={{ width: "90%" }}
-                    placeholder="Search..."
-                    className={classes.searchBox1}
-                    value={searchResult}
-                    onChange={onHandleChange}
-                    onKeyDown={(event) => event.stopPropagation()}
-                  />
-                </Grid>
-                <Box>
-                  {searchResult && (
-                    <ul style={{ marginTop: "10px", paddingLeft: "10px" }}>
-                      {filteredSerachResult.map((item) => {
-                        return (
-                          <>
-                            <li
-                              className={classes.headersearchList}
-                              key={item}
-                              onClick={() => handleSearchItemClick(item.id)}
-                            >
-                              <Box className={classes.cartImgContainer}>
-                                <img
-                                  style={{ width: "100%" }}
-                                  src={item.imgUrl}
-                                  alt="search"
-                                />
-                              </Box>
-                              <Box className={classes.bagCartListDetails}>
-                                <Box
-                                  className={classes.bagCartText}
-                                  sx={{ width: "90%" }}
-                                >
-                                  {item.pName}
-                                </Box>
-                              </Box>
-                            </li>
-                            <Divider />
-                          </>
-                        );
-                      })}
-                    </ul>
-                  )}
-                </Box>
-              </Box>
-            </Menu>
-          </Box>
-          <Box className={classes.headerSideContainer}>
-          <HeaderCart icon={<ShoppingBasketIcon sx={{fontSize:"1.8em",color:" #002831"}}/>} content={"Your Cart"} />
-          <HeaderCart icon={<ShareLocationIcon sx={{fontSize:"1.8em",color:" #002831"}}/>} content={"Track Order"}/>
-          <HeaderCart icon={<AccountCircleIcon sx={{fontSize:"1.8em",color:" #002831"}}/>} content={"Login/Register"}/>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      <Box component="nav">
-        <Drawer
-          container={container}
-          variant="temporary"
-          open={mobileOpen}
-          onClose={handleDrawerToggle}
-          ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
-          }}
-          sx={{
-            display: { xs: "block", sm: "block" },
-            "& .MuiDrawer-paper": {
-              boxSizing: "border-box",
-              width: drawerWidth,
-              // backgroundColor: "#009f76",
-            },
-          }}
-        >
-          {drawer}
-        </Drawer>
+            {drawer}
+          </Drawer>
+        </Box>
+        <Box component="main">
+          <Toolbar />
+        </Box>
       </Box>
-      <Box component="main">
-        <Toolbar />
-      </Box>
-    </Box>
     </>
   );
 };
 
-export default Header
+export default Header;

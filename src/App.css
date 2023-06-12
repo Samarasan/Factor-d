@@ -10,7 +10,7 @@ body {
   font-family: Poppins Arial Helvetica sans-serif;
   cursor: pointer;
   text-transform: uppercase;
-  margin-left: 30px;
+  /* margin-left: 30px; */
   font-size: 13px;
   padding-bottom: 2px;
   font-weight: 550;
@@ -461,4 +461,43 @@ margin-bottom: 45px;
 }
 .gReviewPartRight{
   height: 100% !important;
+}
+.googleReview{
+  padding: 2rem 0rem;
+}
+
+@media screen and (max-width: 769px) {
+  .mid-section h3{
+    font-size: 25px;
+  }
+  .mid-section h2{
+    font-size: 35px;
+  }
+  .block1 {
+    margin-top: 0px;
+    margin-right: 0px;
+    padding: 25px 27px 25px 25px;
+  }
+  .mid-section .block2{
+     /* margin-top: 0px; */
+    margin-right: 0px;
+    padding: 25px 27px 25px 25px;
+  }
+  .mid-section .block3{
+    margin-left: 0px;
+    padding: 25px 25px 25px 26px;
+  }
+  .mid-section .block4{
+    margin-left: 0px;
+    padding: 25px 25px 25px 26px;
+  }
+  .googleReview{
+    padding: 0;
+  }
+  .gRevviewHeader h2{
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-device-width: 780px) and (max-device-width: 1024px) { 
+ 
 }
