@@ -52,7 +52,7 @@ const HeaderPart = () => {
                     <div className="dropsplit">
                       <button
                         className={scrollY > 16 ? "dropbtn1" : "dropbtn"}
-                        onClick={() => handlelistClick(item)}
+                        onClick={() => navigate("/category")}
                       >
                         {item.item}
                       </button>

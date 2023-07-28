@@ -17,6 +17,8 @@ const TestimonialCarousel = ({ testimonials, interval = 5000 }) => {
   }, [testimonials.length, interval]);
 
   const handleNext = () => {
+    console.log(activeIndex,"activeIndex");
+    
     setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
   };
 

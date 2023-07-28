@@ -8,8 +8,8 @@ export const useStyles = makeStyles(() => ({
   headerCon: {
     height: "98px !important",
     "@media screen and (min-width: 1023px) and (max-width: 1240px)": {
-      height:"74px !important"
-    }
+      height: "74px !important",
+    },
   },
   headerFixed: {
     position: "fixed",
@@ -180,10 +180,10 @@ export const useStyles = makeStyles(() => ({
   headermbl: {
     fontFamily: "Vujahday Script, cursive !important",
     padding: "5px 0px 5px 8px !important",
-    textAlign:"left !important",
+    textAlign: "left !important",
     backgroundImage: "linear-gradient(to right top, #16754D, #002831);",
-    fontSize:"16px !important",
-    color:"white"
+    fontSize: "16px !important",
+    color: "white",
   },
   headermblsub: {
     fontFamily: "Vujahday Script, cursive !important",
@@ -192,7 +192,7 @@ export const useStyles = makeStyles(() => ({
     padding: "10px 0px!important",
     transition: "1s ease !important",
     backgroundColor: "#002831",
-    color:"white"
+    color: "white",
   },
   listItems: {
     "&.css-10hburv-MuiTypography-root": {
@@ -205,7 +205,7 @@ export const useStyles = makeStyles(() => ({
     alignItems: "center",
     textAlign: "left",
     margin: "10px 0px",
-  }, 
+  },
   menydrptitle: {
     fontSize: "1.6rem !important",
     lineHeight: "1.3rem !important",
@@ -222,7 +222,6 @@ export const useStyles = makeStyles(() => ({
     listStyle: "none",
     top: "0",
     fontWeight: "550",
-   
   },
   partListItems1: {
     textTransform: "uppercase",
@@ -239,7 +238,7 @@ export const useStyles = makeStyles(() => ({
     fontWeight: "550",
     "@media screen and (min-width: 1023px) and (max-width: 1240px)": {
       top: "69px",
-    }
+    },
   },
   headerPartLists: {
     display: "flex",
@@ -356,13 +355,13 @@ export const useStyles = makeStyles(() => ({
       marginLeft: "20px",
     },
     "@media (max-width: 780px)": {
-      width:'100%',
-      alignItems:"center",
-      justifyContent:"center",
-      "& img":{
-        width:"80px",
-      }
-    }
+      width: "100%",
+      alignItems: "center",
+      justifyContent: "center",
+      "& img": {
+        width: "80px",
+      },
+    },
   },
   ratingsNum: {
     fontSize: "6rem",
@@ -373,22 +372,22 @@ export const useStyles = makeStyles(() => ({
       fontSize: "1.5rem",
     },
     "@media (max-width: 780px)": {
-      textAlign:"left",
-      margin:"0px",
-      fontSize:"3rem",
-      "& span":{
-        fontSize:"0.875rem"
-      }
-    }
+      textAlign: "left",
+      margin: "0px",
+      fontSize: "3rem",
+      "& span": {
+        fontSize: "0.875rem",
+      },
+    },
   },
   startRating: {
     display: "flex",
     alignItems: "center",
     marginLeft: "42px",
     "@media (max-width: 780px)": {
-      margin:"0px",
-      paddingBottom:"10px"
-    }
+      margin: "0px",
+      paddingBottom: "10px",
+    },
   },
   reviewContainer: {
     padding: "1rem 2rem",
@@ -398,7 +397,6 @@ export const useStyles = makeStyles(() => ({
     marginBottom: "20px",
     "@media (max-width: 780px)": {
       marginLeft: "0px",
-     
     },
   },
   ratingHead: {
@@ -431,5 +429,346 @@ export const useStyles = makeStyles(() => ({
     "&::-moz-scrollbar-thumb": {
       background: "#888", // Set the color of the thumb for Firefox and some newer browsers
     },
+  },
+
+  //AllProducts
+  allProductsHeading: {
+    fontSize: "28px !important",
+    color: "#008f6a",
+    fontWeight: "700 !important",
+    margin: " 70px 0 50px",
+    position: "relative",
+    display: "block",
+    paddingBottom: "10px",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    textTransform: "uppercase",
+    textAlign: "center",
+  },
+
+  //menu
+  menuContainer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#00000024",
+    marginTop: "1px !important",
+    width: "100%",
+    "& img": {
+      width: "100%",
+      maxHeight: "24em",
+      height: "100%",
+      objectFit: "cover",
+    },
+  },
+  menuAllign: {
+    paddingLeft: "10px !important",
+    display: "flex",
+    alignItems: "center",
+    "@media (max-width: 500px)": {
+      maxWidth: "100% !important",
+      padding: "10px !important",
+    },
+  },
+
+  singleProductContainer: {
+    textAlign: "center",
+    float: "none",
+    maxWidth: "78%",
+    margin: "0 auto !important",
+    padding: "20px 0px",
+    "@media (max-width: 500px)": {
+      display: "block !important",
+    },
+  },
+  singleProductcolumn: {
+    "@media (max-width: 500px)": {
+      maxWidth: "100% !important",
+      paddingLeft: "0px !important",
+    },
+  },
+  singleProductimgSec: {
+    boxShadow: "none !important",
+    borderRadius: "16px !important",
+    marginBottom: "30px !important",
+    "@media (max-width: 500px)": {
+      height: "100% !important",
+    },
+  },
+  singleProductimgSecChild: {
+    cursor: "pointer",
+    width: "100%",
+    height: "100%",
+  },
+  singleProductrightAllign: {
+    paddingLeft: "100px !important",
+    "@media (max-width: 500px)": {
+      maxWidth: "100% !important",
+      padding: "10px !important",
+    },
+  },
+
+  //sp
+  spcontentContainer: {
+    textAlign: "left",
+  },
+  spheader: {
+    fontSize: "2.625rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    paddingBottom: "15px",
+    "@media (max-width: 800px)": {
+      fontSize: "1.625rem !important",
+    },
+  },
+  spprice: {
+    fontSize: "1.5rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    paddingBottom: "15px",
+    "@media (max-width: 800px)": {
+      fontSize: "1.25rem !important",
+    },
+  },
+  pCode: {
+    fontSize: "1.25rem !important",
+    fontFamily: "T-Star Pro !important",
+    marginLeft: "16px",
+    color: "#6e6e73",
+  },
+  pText: {
+    fontSize: "1.25rem !important",
+    lineHeight: "1.9rem !important",
+    marginBottom: "25px !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    "@media (max-width: 800px)": {
+      fontSize: "1rem !important",
+    },
+  },
+  pTextRead: {
+    fontSize: "1.25rem !important",
+    lineHeight: "1.9rem !important",
+    marginBottom: "25px !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    textDecoration: "underline",
+    cursor: "pointer",
+  },
+  spqnty: {
+    fontSize: "1rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    marginBottom: "18px !important",
+  },
+  spinputContainer: {
+    position: "relative",
+  },
+  spinputBox: {
+    position: "relative",
+    outline: " none",
+    width: "95px",
+    backgroundColor: " #fff",
+    border: " 1px solid #3c3c3c",
+    borderRadius: " 8px",
+    padding: "8px 48px 8px 7px",
+    height: "56px",
+    textAlign: " center",
+    cursor: "pointer",
+  },
+  sparrowContainer: {
+    opacity: 1,
+    position: "absolute",
+    backgroundColor: "#fff",
+    top: 0,
+    right: "68%",
+    width: "calc(17% - 6px)",
+    height: "100%",
+    border: " 1px solid #3c3c3c",
+    borderRadius: "0 8px 8px 0",
+    display: "flex",
+    flexDirection: "column",
+    padding: "0 6px 0",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: " pointer",
+    "@media screen and (min-width: 1650px) and (max-width: 2200px)": {
+      right: "82%",
+      width: "calc(10% - 6px)",
+    },
+    "@media (max-width: 500px)": {
+      right: "59%",
+      width: "calc(22% - 6px)",
+    },
+    "@media screen and (min-width: 501px) and (max-width: 800px)": {
+      right: "52%",
+      width: "calc(26% - 6px)",
+    },
+  },
+  spupArrow: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    cursor: "pointer !important",
+    width: "16px",
+    height: "16px",
+  },
+  spcartBtn: {
+    width: "95% !important",
+    backgroundColor: "#009f76 !important",
+    color: "#fff !important",
+    fontSize: "1.2rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    borderRadius: "56px !important",
+    padding: "14px 16px !important",
+    margin: "30px 0px !important",
+    "@media (max-width: 800px)": {
+      fontSize: "0.875rem !important",
+      textTransform: "capitalize !important",
+    },
+  },
+  spcartBtn1: {
+    width: "40% !important",
+    backgroundColor: "#009f76 !important",
+    color: "#fff !important",
+    fontSize: "1.1rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    borderRadius: "4px !important",
+    textTransform: "capitalize !important",
+    padding: "5px 5px !important",
+    // margin: "30px 0px !important",
+    "@media (max-width: 800px)": {
+      fontSize: "0.875rem !important",
+      textTransform: "capitalize !important",
+    },
+  },
+  //Acordian
+  productDetailAccordianContainer: {
+    margin: "20px 0px",
+  },
+  accTitle: {
+    fontSize: "1.6rem !important",
+    lineHeight: "1.3rem !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    paddingLeft: "30px !important",
+    position: "relative",
+    "@media (max-width: 800px)": {
+      fontSize: "1rem !important",
+    },
+  },
+  accordianContent: {
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontSize: "1.25rem !important",
+    lineHeight: "1.6rem !important",
+    padding: "0 32px",
+    marginBottom: "17px",
+    "@media (max-width: 800px)": {
+      fontSize: "1rem !important",
+      padding: "0 4px",
+    },
+  },
+  acclists: {
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontSize: "1.25rem !important",
+    lineHeight: "1.6rem !important",
+  },
+  productDetailacclistitems: {
+    marginTop: "32px",
+  },
+  acclistTexts: {
+    paddingBottom: "12px",
+    listStyleType: "disc",
+    marginLeft: "14px",
+    textAlign: "left",
+    lineHeight: "2.5rem !important",
+    marginRight: "22px",
+    color: "#000",
+  },
+  accTable: {
+    borderCollapse: "collapse",
+    borderColor: "#6e6e73",
+  },
+  accTableHead: {
+    padding: "6px 16px",
+    fontWeight: "400",
+  },
+  accTableContent: {
+    marginRight: "20px !important",
+    marginTop: "30px !important",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontSize: "1.25rem !important",
+    lineHeight: "1.6rem !important",
+  },
+
+  footerContainer: {
+    backgroundImage: "linear-gradient(to right top, #16754D, #002831);",
+    paddingTop: "40px",
+  },
+  footerBottom: {
+    background: "#002831",
+    padding: "7px 0",
+    fontSize: "12px",
+  },
+  fbContainer: {
+    margin: "0 auto",
+    width: "100%",
+    maxWidth: "94%",
+  },
+  fbPrivacylists: {
+    justifyContent: "flex-end",
+    listStyle: "none",
+    margin: "0",
+    padding: "0",
+    display:'flex',
+    "& li": {
+      color: "#fff",
+      borderRight: "2px solid #fff",
+      paddingRight: "9px",
+      marginLeft:'10px'
+    },
+  },
+  fbPhotolist:{
+    listStyle: "none",
+    margin: "0",
+    padding: "0",
+    fontFamily: "Poppins Arial Helvetica sans-serif !important",
+    fontSize: "0.875rem !important",
+    color:"#fff",
+    "& li": {
+      position: "relative",
+      paddingLeft: "20px", 
+      marginBottom:'8px',
+      // Add padding to create space for the arrow
+      transition: "transform 0.2s",
+            "&::before": {
+        content: "''",
+        position: "absolute",
+        left: 0,
+        top: "30%",
+        transform: "translateY(-50%)",
+        width: "6px", // Adjust the arrow width as needed
+        height: "6px", // Adjust the arrow height as needed
+        borderLeft: "2px solid #fff", // Adjust the arrow color and size as needed
+        borderBottom: "2px solid #fff", // Adjust the arrow color and size as needed
+        transition: "transform 0.2s", // Optional: add a transition for the arrow animation
+        transform :'rotate(225deg)'
+      },
+      "&:hover": {
+        transform: "translateX(10px)", // Slide the whole li element to the right on hover
+      },
+    }
+  },
+  fbSocial:{
+    "& ul":{
+      listStyle:'none',
+      display:'flex',
+      alignItems:'center',
+      padding:"0px"
+    },
+    "& li":{
+      marginLeft:'10px',
+      color:" #fff",
+      fontSize: "15px",
+      textAlign: "center",
+      backgroundColor: "#002831",
+      borderRadius: "3px",
+      border: "1px solid #002831",
+      padding: "5px 10px",
+      paddingTop:'7px'
+    }
   },
 }));

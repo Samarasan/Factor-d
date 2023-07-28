@@ -3,8 +3,10 @@ import { useStyles } from "../../hooks/useMuiStyle";
 import { Box, Grid, Paper } from "@mui/material";
 import Cards from "../../components/cards/Cards";
 import pd2 from "../../Assets/product/pd2.jpeg"
+import { trendinNow } from "../../components/products/trendinNow";
 const TrendinNow = () => {
     const classes = useStyles();
+    
     return (
       <Box component={Paper} className={classes.freshArraival}>
         <Box className={classes.viewCardHeader}>
@@ -16,9 +18,9 @@ const TrendinNow = () => {
           //   spacing={{ xs: 2, md: 3 }}
             columns={{ xs: 4, sm: 12, md: 12 }}
           >
-            {Array.from(Array(8)).map((_, index) => (
+            {trendinNow.map((data, index) => (
               <Grid item xs={2} sm={4} md={2.4} key={index}>
-                <Cards pImg={pd2} />
+                <Cards data={data} />
               </Grid>
             ))}
           </Grid>

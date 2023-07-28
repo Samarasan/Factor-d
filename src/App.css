@@ -16,7 +16,7 @@ body {
   font-weight: 550;
 }
 
-.dropbtn1{
+.dropbtn1 {
   border: none;
   background: transparent;
   font-size: 1rem;
@@ -88,21 +88,24 @@ body {
 .carousel-status {
   display: none;
 }
-.slider-wrapper{
+.slider-wrapper {
   border-radius: 30px;
 }
 
+.carousel.carousel-slider .control-arrow:hover{
+  background: none !important;
+}
 /* cards */
-.cardContainer{
+.cardContainer {
   /* width: 18%; */
   padding: 5px;
   display: flex;
-    align-items: center;
-    justify-content: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
-.product-list:hover{
-  box-shadow: 0px 21px 59px 0px rgba(0,0,0,0.6);
-
+.product-list:hover {
+  box-shadow: 0px 21px 59px 0px rgba(0, 0, 0, 0.6);
 }
 .product-list {
   display: block !important;
@@ -132,13 +135,14 @@ body {
   /* height: 100%; */
   overflow: hidden;
   padding: 8px;
-
 }
-.product-img-wrap img{
-    transform-style: preserve-3d;
-    max-width: 100%
+.product-img-wrap img {
+  transform-style: preserve-3d;
+  max-width: 100%;
 }
-.product-img-primary, .product-img-alt, .product-img {
+.product-img-primary,
+.product-img-alt,
+.product-img {
   width: 100%;
   display: block;
   -webkit-transition: 0.3s;
@@ -151,35 +155,35 @@ body {
   border-top-right-radius: calc(0.25rem - 1px);
 }
 .product-info {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   padding: 5px 5px;
   position: relative;
   margin-left: 10px;
   padding-bottom: 30px;
 }
-.product-info-title{
+.product-info-title {
   position: relative;
-    display: block;
-    line-height: 1.25em;
-    letter-spacing: 1px;
-    /* overflow: hidden; */
-    text-decoration: none;
-    font-size: 15px;
-    height: auto;
-    color: black;
-    max-height: 3.75em;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  display: block;
+  line-height: 1.25em;
+  letter-spacing: 1px;
+  /* overflow: hidden; */
+  text-decoration: none;
+  font-size: 15px;
+  height: auto;
+  color: black;
+  max-height: 3.75em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.product-info-rating{
+.product-info-rating {
   font-size: 13px;
   margin-top: 10px;
 }
 .product-info-rating span {
   /* color: #e9018b; */
-  color: #16754D;
+  color: #16754d;
   /* color: #002831; */
 }
 
@@ -212,30 +216,31 @@ body {
   margin-left: 4px;
 }
 
-
 /* midsection */
-.mid-section{
-  background: #000 url(https://www.clickokart.com/themes/default/assets/img/mid-img.jpg) repeat 0 0;
+.mid-section {
+  background: #000
+    url(https://www.clickokart.com/themes/default/assets/img/mid-img.jpg) repeat
+    0 0;
   padding: 70px 0 80px;
-    overflow: hidden;
-    margin-top: 0px;
+  overflow: hidden;
+  margin-top: 0px;
 }
-.containermid{
+.containermid {
   margin-right: auto;
-    margin-left: auto;
-    padding-left: 15px;
-    padding-right: 15px;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.containermid::before{
+.containermid::before {
   content: " ";
-    display: table;
+  display: table;
 }
-.rowmid::before{
+.rowmid::before {
   content: " ";
-    display: table;
+  display: table;
 }
-.rowmid{
+.rowmid {
   margin-left: -15px;
   margin-right: -15px;
 }
@@ -246,8 +251,8 @@ body {
   color: #fff;
   text-align: center;
   padding-bottom: 10px;
-  letter-spacing: .5px;
-  font-family: 'Vujahday Script', cursive;
+  letter-spacing: 0.5px;
+  font-family: "Vujahday Script", cursive;
 }
 .mid-section h2 {
   font-size: 61px;
@@ -256,15 +261,15 @@ body {
   color: #fff;
   text-align: center;
   padding-bottom: 20px;
-  letter-spacing: .5px;
-  font-family: 'Vujahday Script', cursive;
+  letter-spacing: 0.5px;
+  font-family: "Vujahday Script", cursive;
 }
 .rowmid:after {
   content: "";
   display: table;
   clear: both;
 }
-.block1{
+.block1 {
   overflow: hidden;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
@@ -345,16 +350,16 @@ body {
   margin-left: -132px;
 }
 /* googleReview */
-.gRevviewHeader h2{
-text-align: center;
-margin-bottom: 45px;
+.gRevviewHeader h2 {
+  text-align: center;
+  margin-bottom: 45px;
 }
-.gRevviewHeader span{
+.gRevviewHeader span {
   color: #009d48;
-  }
+}
 
 /* testisec */
-.testimonialSec{
+.testimonialSec {
   min-height: 333px;
   position: relative;
   background: url(https://www.clickokart.com/themes/default/assets/img/testimonials.jpg);
@@ -365,27 +370,27 @@ margin-bottom: 45px;
   margin-bottom: 0px;
   text-align: center;
 }
-.testiContainer{
+.testiContainer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.testiContainer::before{
-  content: '';
+.testiContainer::before {
+  content: "";
   display: table;
 }
-.category-title{
+.category-title {
   padding: 11px;
 }
 .title_heading {
   font-size: 43px;
   font-weight: 500;
   text-align: center;
-  font-family: 'Vujahday Script', cursive;
+  font-family: "Vujahday Script", cursive;
   color: #fff;
 }
-.carouselsec{
+.carouselsec {
   position: relative;
 }
 .carousel-inner {
@@ -394,7 +399,7 @@ margin-bottom: 45px;
   width: 100%;
 }
 
-.item{
+.item {
   transform: translate3d(0, 0, 0);
   transition: transform 0.6s ease-in-out;
 }
@@ -414,7 +419,7 @@ margin-bottom: 45px;
   font-size: 20px;
   line-height: 1.4;
   margin: 20px 0 20px 0;
-  font-family: 'Merriweather', serif;
+  font-family: "Merriweather", serif;
 }
 .testimonial4_slide h4 {
   color: #009d48;
@@ -427,13 +432,13 @@ margin-bottom: 45px;
   top: 0;
   left: 0;
   bottom: 0;
-  opacity: .5;
+  opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 51px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-  background-color: rgba(0,0,0,0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
 }
 .carousel-controlrigh {
   position: absolute;
@@ -441,36 +446,36 @@ margin-bottom: 45px;
   left: 20px;
   bottom: 0;
   right: 20px;
-  opacity: .5;
+  opacity: 0.5;
   filter: alpha(opacity=50);
   font-size: 51px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
-  background-color: rgba(0,0,0,0);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
 }
-.fa{
+.fa {
   display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
-.right{
+.right {
   text-align: right;
 }
-.gReviewPartRight{
+.gReviewPartRight {
   height: 100% !important;
 }
-.googleReview{
+.googleReview {
   padding: 2rem 0rem;
 }
 
 @media screen and (max-width: 769px) {
-  .mid-section h3{
+  .mid-section h3 {
     font-size: 25px;
   }
-  .mid-section h2{
+  .mid-section h2 {
     font-size: 35px;
   }
   .block1 {
@@ -478,26 +483,54 @@ margin-bottom: 45px;
     margin-right: 0px;
     padding: 25px 27px 25px 25px;
   }
-  .mid-section .block2{
-     /* margin-top: 0px; */
+  .mid-section .block2 {
+    /* margin-top: 0px; */
     margin-right: 0px;
     padding: 25px 27px 25px 25px;
   }
-  .mid-section .block3{
+  .mid-section .block3 {
     margin-left: 0px;
     padding: 25px 25px 25px 26px;
   }
-  .mid-section .block4{
+  .mid-section .block4 {
     margin-left: 0px;
     padding: 25px 25px 25px 26px;
   }
-  .googleReview{
+  .googleReview {
     padding: 0;
   }
-  .gRevviewHeader h2{
+  .gRevviewHeader h2 {
     margin-bottom: 10px;
   }
 }
-@media screen and (min-device-width: 780px) and (max-device-width: 1024px) { 
- 
+@media screen and (min-device-width: 780px) and (max-device-width: 1024px) {
+}
+
+/* AllProduct card */
+
+.allProductFeature {
+  background: #fff;
+  padding: 35px 20px;
+  margin-bottom: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: 180px;
+  text-align: center;
+  width: 69%;
+  cursor: pointer;
+}
+.mediaImg {
+  max-width: 90px;
+  margin: 0 auto 20px;
+}
+
+.allprodimg {
+  height: auto;
+  max-width: 100%;
+}
+.allprodtitle {
+  margin-bottom: 0;
+  font-size: 1.5rem;
+  line-height: 22px;
+  color: #666;
+  font-family: "Poppins Arial Helvetica sans-serif !important";
 }
