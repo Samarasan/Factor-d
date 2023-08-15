@@ -4,7 +4,7 @@ import { Box, Grid } from "@mui/material";
 import factor from "../../Assets/factorD.jpg";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
-import { footerItems } from "../../components/constants";
+import { footerItems, footerItems1, footerItems2, footerItems3 } from "../../components/constants";
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
@@ -69,14 +69,14 @@ const Footer = () => {
               Photo to Art
             </Box>
             <ul className={classes.fbPhotolist}>
-              {footerItems.map((item, index) => (
+              {footerItems1.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           </Grid>
           <Grid item xs={2.5} className={classes.singleProductcolumn}>
           <ul className={classes.fbPhotolist} style={{marginTop:'2rem'}}>
-              {footerItems.map((item, index) => (
+              {footerItems2.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
@@ -86,7 +86,7 @@ const Footer = () => {
               Information
             </Box>
             <ul className={classes.fbPhotolist}>
-              {footerItems.map((item, index) => (
+              {footerItems3.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>

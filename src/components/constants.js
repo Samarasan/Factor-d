@@ -6,7 +6,7 @@ import samp3 from '../Assets/samp3.jpg'
 export const categories = [
     {
       id: 1,
-      catName: "Frames",
+      catName: "ssssFrames",
       pIcon:pd1,
     },
     {
@@ -176,4 +176,6 @@ export const categories = [
   ];
 
 
-  export const footerItems =["Oil Painting",'Digital Painting',"Pencil Art","Color Pencil Art","Graphic Art","Pop Art"]
+  export const footerItems1 =["Oil Painting",'Digital Painting',"Pencil Art","Color Pencil Art","Graphic Art","Pop Art"]
+  export const footerItems2 =["Oil Painting",'Digital Painting',"Pencil Art","Color Pencil Art","Graphic Art","Pop Art"]
+  export const footerItems3 =["Oil Painting",'Digital Painting',"Pencil Art","Color Pencil Art","Graphic Art","Pop Art"]
